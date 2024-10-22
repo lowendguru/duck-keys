@@ -19,7 +19,6 @@ import model.StratagemMap;
 import utils.FileHelper;
 
 public class MainWindow {
-	
 
 	public static final boolean TESTING = false;
 	public static final int KEY_DELAY = 25;
