@@ -1,6 +1,7 @@
 package listener;
 
 import java.util.Map.Entry;
+import java.util.concurrent.BlockingQueue;
 
 import lc.kra.system.keyboard.GlobalKeyboardHook;
 import lc.kra.system.keyboard.event.GlobalKeyAdapter;
@@ -8,7 +9,7 @@ import lc.kra.system.keyboard.event.GlobalKeyEvent;
 
 public class GlobalKeyboardListener {
 
-	public GlobalKeyboardListener() {
+	public GlobalKeyboardListener(BlockingQueue<Boolean> cola) {
 
 		// might throw a UnsatisfiedLinkError if the native library fails to load or a
 		// RuntimeException if hooking fails
@@ -25,6 +26,11 @@ public class GlobalKeyboardListener {
 				System.out.println(event);
 				System.out.println("event:" + event.getVirtualKeyCode());
 
+				// TODO play sound
+				// new SoundPlayerThread().run();
+				System.out.println("agregando a la cola");
+				cola.add(true);
+				System.out.println("COLA SIZE: " + cola.size());
 			}
 
 			@Override
