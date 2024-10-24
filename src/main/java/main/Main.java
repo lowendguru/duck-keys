@@ -11,11 +11,11 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		BlockingQueue<Boolean> cola = new LinkedBlockingQueue<>();
-		System.out.println("1");
-
-		SoundPlayOrchestrator soundOrchestrator = new SoundPlayOrchestrator(cola);
-		Thread soundOrchestratorThread = new Thread(soundOrchestrator);
-		soundOrchestratorThread.start();
+		
+//		System.out.println("1");
+//		SoundPlayOrchestrator soundOrchestrator = new SoundPlayOrchestrator(cola);
+//		Thread soundOrchestratorThread = new Thread(soundOrchestrator);
+//		soundOrchestratorThread.start();
 
 		System.out.println("2");
 		new GlobalKeyboardListener(cola);

@@ -6,6 +6,7 @@ import java.util.concurrent.BlockingQueue;
 import lc.kra.system.keyboard.GlobalKeyboardHook;
 import lc.kra.system.keyboard.event.GlobalKeyAdapter;
 import lc.kra.system.keyboard.event.GlobalKeyEvent;
+import soundplayer.SoundPlayer;
 
 public class GlobalKeyboardListener {
 
@@ -27,10 +28,13 @@ public class GlobalKeyboardListener {
 				System.out.println("event:" + event.getVirtualKeyCode());
 
 				// TODO play sound
+				String filePath = "resources/cuac.wav"; // Update this with your sound file path
+				SoundPlayer.playSound(filePath);
+				
 				// new SoundPlayerThread().run();
-				System.out.println("agregando a la cola");
-				cola.add(true);
-				System.out.println("COLA SIZE: " + cola.size());
+//				System.out.println("agregando a la cola");
+//				cola.add(true);
+//				System.out.println("COLA SIZE: " + cola.size());
 			}
 
 			@Override
